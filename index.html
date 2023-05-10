@@ -560,6 +560,7 @@ Peter Gilles
 <li>Challenges of Luxembourgish
 <ul>
 <li>paucity of training data</li>
+<li>multilingual context: words and phrases from French and German</li>
 <li>lots of spelling variation</li>
 <li>costly to compile training data</li>
 </ul></li>
@@ -706,9 +707,9 @@ Peter Gilles
 <span id="cb2-11"><a href="#cb2-11"></a>vocab_dict <span class="op">=</span> {v: k <span class="cf">for</span> k, v <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">sorted</span>(vocab_list))}</span>
 <span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(vocab_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Vocab dict</li>
+<li>Vocabulary dictionary containing all letters in the training data</li>
 </ul>
-<pre><code>{' ': 0, '$': 1, "'": 2, '0': 3, '1': 4, '2': 5, '3': 6, '4': 7, '5': 8, '6': 9, '7': 10, '8': 11, '9': 12, '\\': 13, '^': 14, 'a': 15, 'b': 16, 'c': 17, 'd': 18, 'e': 19, 'f': 20, 'g': 21, 'h': 22, 'i': 23, 'j': 24, 'k': 25, 'l': 26, 'm': 27, 'n': 28, 'o': 29, 'p': 30, 'q': 31, 'r': 32, 's': 33, 't': 34, 'u': 35, 'v': 36, 'w': 37, 'x': 38, 'y': 39, 'z': 40, 'à': 41, 'á': 42, 'ä': 43, 'ç': 44, 'è': 45, 'é': 46, 'ë': 47, 'ö': 48, 'ú': 49, 'ü': 50, 'œ': 51, '‚': 52, '…': 53}</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>{<span class="st">' '</span>: <span class="dv">0</span>, <span class="st">'$'</span>: <span class="dv">1</span>, <span class="st">"'"</span>: <span class="dv">2</span>, <span class="st">'0'</span>: <span class="dv">3</span>, <span class="st">'1'</span>: <span class="dv">4</span>, <span class="st">'2'</span>: <span class="dv">5</span>, <span class="st">'3'</span>: <span class="dv">6</span>, <span class="st">'4'</span>: <span class="dv">7</span>, <span class="st">'5'</span>: <span class="dv">8</span>, <span class="st">'6'</span>: <span class="dv">9</span>, <span class="st">'7'</span>: <span class="dv">10</span>, <span class="st">'8'</span>: <span class="dv">11</span>, <span class="st">'9'</span>: <span class="dv">12</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">'</span>: <span class="dv">13</span>, <span class="st">'^'</span>: <span class="dv">14</span>, <span class="st">'a'</span>: <span class="dv">15</span>, <span class="st">'b'</span>: <span class="dv">16</span>, <span class="st">'c'</span>: <span class="dv">17</span>, <span class="st">'d'</span>: <span class="dv">18</span>, <span class="st">'e'</span>: <span class="dv">19</span>, <span class="st">'f'</span>: <span class="dv">20</span>, <span class="st">'g'</span>: <span class="dv">21</span>, <span class="st">'h'</span>: <span class="dv">22</span>, <span class="st">'i'</span>: <span class="dv">23</span>, <span class="st">'j'</span>: <span class="dv">24</span>, <span class="st">'k'</span>: <span class="dv">25</span>, <span class="st">'l'</span>: <span class="dv">26</span>, <span class="st">'m'</span>: <span class="dv">27</span>, <span class="st">'n'</span>: <span class="dv">28</span>, <span class="st">'o'</span>: <span class="dv">29</span>, <span class="st">'p'</span>: <span class="dv">30</span>, <span class="st">'q'</span>: <span class="dv">31</span>, <span class="st">'r'</span>: <span class="dv">32</span>, <span class="st">'s'</span>: <span class="dv">33</span>, <span class="st">'t'</span>: <span class="dv">34</span>, <span class="st">'u'</span>: <span class="dv">35</span>, <span class="st">'v'</span>: <span class="dv">36</span>, <span class="st">'w'</span>: <span class="dv">37</span>, <span class="st">'x'</span>: <span class="dv">38</span>, <span class="st">'y'</span>: <span class="dv">39</span>, <span class="st">'z'</span>: <span class="dv">40</span>, <span class="st">'à'</span>: <span class="dv">41</span>, <span class="st">'á'</span>: <span class="dv">42</span>, <span class="st">'ä'</span>: <span class="dv">43</span>, <span class="st">'ç'</span>: <span class="dv">44</span>, <span class="st">'è'</span>: <span class="dv">45</span>, <span class="st">'é'</span>: <span class="dv">46</span>, <span class="st">'ë'</span>: <span class="dv">47</span>, <span class="st">'ö'</span>: <span class="dv">48</span>, <span class="st">'ú'</span>: <span class="dv">49</span>, <span class="st">'ü'</span>: <span class="dv">50</span>, <span class="st">'œ'</span>: <span class="dv">51</span>, <span class="st">'‚'</span>: <span class="dv">52</span>, <span class="st">'…'</span>: <span class="dv">53</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="preprocessing-for-fine-tuning-2" class="slide level2">
 <h2>Preprocessing for fine-tuning</h2>
@@ -724,7 +725,7 @@ Peter Gilles
 <span id="cb4-7"><a href="#cb4-7"></a></span>
 <span id="cb4-8"><a href="#cb4-8"></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(speech_file_to_array_fn, remove_columns<span class="op">=</span>lux_voice_train.column_names,num_proc<span class="op">=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
-<li>Prepare the model</li>
+<li>Prepare the model tokenizer, feature extractor and processor</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2CTCTokenizer</span>
 <span id="cb5-2"><a href="#cb5-2"></a>tokenizer <span class="op">=</span> Wav2Vec2CTCTokenizer(<span class="st">"./vocab.json"</span>, unk_token<span class="op">=</span><span class="st">"[UNK]"</span>, pad_token<span class="op">=</span><span class="st">"[PAD]"</span>, word_delimiter_token<span class="op">=</span><span class="st">"|"</span>)</span>
@@ -752,7 +753,19 @@ Peter Gilles
 <span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">return</span> batch</span>
 <span id="cb6-12"><a href="#cb6-12"></a>    </span>
 <span id="cb6-13"><a href="#cb6-13"></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(prepare_dataset, remove_columns<span class="op">=</span>lux_voice_test.column_names, batch_size<span class="op">=</span><span class="dv">8</span>, num_proc<span class="op">=</span><span class="dv">8</span>, batched<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Audio data is now in an 1-dimensional array shape</li>
+</ul>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>  {<span class="st">'array'</span>: array([ <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>, ...,</span>
+<span id="cb7-2"><a href="#cb7-2"></a>            <span class="op">-</span><span class="fl">7.4556941e-05</span>, <span class="op">-</span><span class="fl">1.4621433e-05</span>, <span class="op">-</span><span class="fl">5.7861507e-05</span>], dtype<span class="op">=</span>float32),</span>
+<span id="cb7-3"><a href="#cb7-3"></a>     <span class="st">'path'</span>: <span class="st">'/root/.cache/huggingface/datasets/downloads/extracted/05be0c29807a73c9b099873d2f5975dae6d05e9f7d577458a2466ecb9a2b0c6b/cv-corpus-6.1-2020-12-11/tr/clips/common_voice_tr_21921195.mp3'</span>,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>     <span class="st">'sampling_rate'</span>: <span class="dv">16000</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
+<section id="connectionist-temporal-classification-ctc" class="slide level2">
+<h2>Connectionist Temporal Classification (CTC)</h2>
+<p>-Used to decode a sound sequence input</p>
+
+<img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/f212d6ce-5173-4725-95c5-3af7113559cd-1-262023d8-578c-44cc-81a9-24bdc4bf1bb3.png" class="r-stretch"></section>
 <section id="training-i.e.-fine-tuning" class="slide level2">
 <h2>Training, i.e.&nbsp;fine-tuning</h2>
 <ul>
@@ -761,57 +774,57 @@ Peter Gilles
 <li>Define training parameters</li>
 <li>Wait for 30 hours</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>model <span class="op">=</span> Wav2Vec2ForCTC.from_pretrained(</span>
-<span id="cb7-2"><a href="#cb7-2"></a>    <span class="st">"facebook/wav2vec2-xls-r-300m"</span>, </span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="co">#"facebook/wav2vec2-xls-r-2b", </span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    attention_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb7-5"><a href="#cb7-5"></a>    hidden_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb7-6"><a href="#cb7-6"></a>    feat_proj_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb7-7"><a href="#cb7-7"></a>    mask_time_prob<span class="op">=</span><span class="fl">0.05</span>, <span class="co">#0.05</span></span>
-<span id="cb7-8"><a href="#cb7-8"></a>    layerdrop<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb7-9"><a href="#cb7-9"></a>    ctc_loss_reduction<span class="op">=</span><span class="st">"mean"</span>,</span>
-<span id="cb7-10"><a href="#cb7-10"></a>    ctc_zero_infinity<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
-<span id="cb7-11"><a href="#cb7-11"></a>    pad_token_id<span class="op">=</span>processor.tokenizer.pad_token_id,</span>
-<span id="cb7-12"><a href="#cb7-12"></a>    vocab_size<span class="op">=</span><span class="bu">len</span>(processor.tokenizer),</span>
-<span id="cb7-13"><a href="#cb7-13"></a>)</span>
-<span id="cb7-14"><a href="#cb7-14"></a><span class="bu">print</span>(<span class="st">"Pretrained model loaded"</span>)</span>
-<span id="cb7-15"><a href="#cb7-15"></a></span>
-<span id="cb7-16"><a href="#cb7-16"></a>model.freeze_feature_encoder()</span>
-<span id="cb7-17"><a href="#cb7-17"></a></span>
-<span id="cb7-18"><a href="#cb7-18"></a>training_args <span class="op">=</span> TrainingArguments(</span>
-<span id="cb7-19"><a href="#cb7-19"></a>  output_dir<span class="op">=</span><span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH"</span>,</span>
-<span id="cb7-20"><a href="#cb7-20"></a>  group_by_length<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb7-21"><a href="#cb7-21"></a>    adam_beta1<span class="op">=</span><span class="fl">0.9</span>,</span>
-<span id="cb7-22"><a href="#cb7-22"></a>    adam_beta2<span class="op">=</span><span class="fl">0.998</span>,</span>
-<span id="cb7-23"><a href="#cb7-23"></a>    adam_epsilon<span class="op">=</span><span class="fl">1e-6</span>,</span>
-<span id="cb7-24"><a href="#cb7-24"></a>    weight_decay<span class="op">=</span><span class="fl">0.005</span>, <span class="co"># Leo: to try 0.01</span></span>
-<span id="cb7-25"><a href="#cb7-25"></a>    per_device_train_batch_size<span class="op">=</span><span class="dv">18</span>, <span class="co">#16, 24, 32(TPU?)</span></span>
-<span id="cb7-26"><a href="#cb7-26"></a>    gradient_accumulation_steps<span class="op">=</span><span class="dv">2</span>, </span>
-<span id="cb7-27"><a href="#cb7-27"></a>    gradient_checkpointing<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
-<span id="cb7-28"><a href="#cb7-28"></a>    evaluation_strategy<span class="op">=</span><span class="st">"steps"</span>,</span>
-<span id="cb7-29"><a href="#cb7-29"></a>    num_train_epochs<span class="op">=</span><span class="dv">30</span>, <span class="co"># Leo: 20, 30 epochs, 40, yqs  0.5 - Just for demo, change it</span></span>
-<span id="cb7-30"><a href="#cb7-30"></a>    fp16<span class="op">=</span><span class="va">True</span>, <span class="co"># Leo: Just on CUDA devices</span></span>
-<span id="cb7-31"><a href="#cb7-31"></a>    save_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb7-32"><a href="#cb7-32"></a>    eval_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb7-33"><a href="#cb7-33"></a>    logging_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb7-34"><a href="#cb7-34"></a>    learning_rate<span class="op">=</span><span class="fl">3e-4</span>, </span>
-<span id="cb7-35"><a href="#cb7-35"></a>    warmup_steps<span class="op">=</span><span class="dv">800</span>, <span class="co">#400, 20 Just for demo, change it</span></span>
-<span id="cb7-36"><a href="#cb7-36"></a>    save_total_limit<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb7-37"><a href="#cb7-37"></a>    metric_for_best_model<span class="op">=</span><span class="st">"eval_loss"</span>, <span class="co"># Leo for early stopping: eval_wer</span></span>
-<span id="cb7-38"><a href="#cb7-38"></a>    load_best_model_at_end<span class="op">=</span><span class="va">True</span>,  <span class="co"># Leo for early stopping</span></span>
-<span id="cb7-39"><a href="#cb7-39"></a>    greater_is_better<span class="op">=</span><span class="va">False</span>, <span class="co"># Leo for early stopping</span></span>
-<span id="cb7-40"><a href="#cb7-40"></a>  push_to_hub<span class="op">=</span><span class="va">False</span></span>
-<span id="cb7-41"><a href="#cb7-41"></a>)</span>
-<span id="cb7-42"><a href="#cb7-42"></a></span>
-<span id="cb7-43"><a href="#cb7-43"></a>trainer <span class="op">=</span> Trainer(</span>
-<span id="cb7-44"><a href="#cb7-44"></a>    model<span class="op">=</span>model,</span>
-<span id="cb7-45"><a href="#cb7-45"></a>    data_collator<span class="op">=</span>data_collator,</span>
-<span id="cb7-46"><a href="#cb7-46"></a>    args<span class="op">=</span>training_args,</span>
-<span id="cb7-47"><a href="#cb7-47"></a>    compute_metrics<span class="op">=</span>compute_metrics,</span>
-<span id="cb7-48"><a href="#cb7-48"></a>    train_dataset<span class="op">=</span>common_voice_train,</span>
-<span id="cb7-49"><a href="#cb7-49"></a>    eval_dataset<span class="op">=</span>common_voice_test,</span>
-<span id="cb7-50"><a href="#cb7-50"></a>    tokenizer<span class="op">=</span>processor.feature_extractor</span>
-<span id="cb7-51"><a href="#cb7-51"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>model <span class="op">=</span> Wav2Vec2ForCTC.from_pretrained(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="st">"facebook/wav2vec2-xls-r-300m"</span>, </span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="co">#"facebook/wav2vec2-xls-r-2b", </span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    attention_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    hidden_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    feat_proj_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    mask_time_prob<span class="op">=</span><span class="fl">0.05</span>, <span class="co">#0.05</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>    layerdrop<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    ctc_loss_reduction<span class="op">=</span><span class="st">"mean"</span>,</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    ctc_zero_infinity<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>    pad_token_id<span class="op">=</span>processor.tokenizer.pad_token_id,</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    vocab_size<span class="op">=</span><span class="bu">len</span>(processor.tokenizer),</span>
+<span id="cb8-13"><a href="#cb8-13"></a>)</span>
+<span id="cb8-14"><a href="#cb8-14"></a><span class="bu">print</span>(<span class="st">"Pretrained model loaded"</span>)</span>
+<span id="cb8-15"><a href="#cb8-15"></a></span>
+<span id="cb8-16"><a href="#cb8-16"></a>model.freeze_feature_encoder()</span>
+<span id="cb8-17"><a href="#cb8-17"></a></span>
+<span id="cb8-18"><a href="#cb8-18"></a>training_args <span class="op">=</span> TrainingArguments(</span>
+<span id="cb8-19"><a href="#cb8-19"></a>  output_dir<span class="op">=</span><span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH"</span>,</span>
+<span id="cb8-20"><a href="#cb8-20"></a>  group_by_length<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-21"><a href="#cb8-21"></a>    adam_beta1<span class="op">=</span><span class="fl">0.9</span>,</span>
+<span id="cb8-22"><a href="#cb8-22"></a>    adam_beta2<span class="op">=</span><span class="fl">0.998</span>,</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    adam_epsilon<span class="op">=</span><span class="fl">1e-6</span>,</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    weight_decay<span class="op">=</span><span class="fl">0.005</span>, <span class="co"># Leo: to try 0.01</span></span>
+<span id="cb8-25"><a href="#cb8-25"></a>    per_device_train_batch_size<span class="op">=</span><span class="dv">18</span>, <span class="co">#16, 24, 32(TPU?)</span></span>
+<span id="cb8-26"><a href="#cb8-26"></a>    gradient_accumulation_steps<span class="op">=</span><span class="dv">2</span>, </span>
+<span id="cb8-27"><a href="#cb8-27"></a>    gradient_checkpointing<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
+<span id="cb8-28"><a href="#cb8-28"></a>    evaluation_strategy<span class="op">=</span><span class="st">"steps"</span>,</span>
+<span id="cb8-29"><a href="#cb8-29"></a>    num_train_epochs<span class="op">=</span><span class="dv">30</span>, <span class="co"># Leo: 20, 30 epochs, 40, yqs  0.5 - Just for demo, change it</span></span>
+<span id="cb8-30"><a href="#cb8-30"></a>    fp16<span class="op">=</span><span class="va">True</span>, <span class="co"># Leo: Just on CUDA devices</span></span>
+<span id="cb8-31"><a href="#cb8-31"></a>    save_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-32"><a href="#cb8-32"></a>    eval_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-33"><a href="#cb8-33"></a>    logging_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-34"><a href="#cb8-34"></a>    learning_rate<span class="op">=</span><span class="fl">3e-4</span>, </span>
+<span id="cb8-35"><a href="#cb8-35"></a>    warmup_steps<span class="op">=</span><span class="dv">800</span>, <span class="co">#400, 20 Just for demo, change it</span></span>
+<span id="cb8-36"><a href="#cb8-36"></a>    save_total_limit<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb8-37"><a href="#cb8-37"></a>    metric_for_best_model<span class="op">=</span><span class="st">"eval_loss"</span>, <span class="co"># Leo for early stopping: eval_wer</span></span>
+<span id="cb8-38"><a href="#cb8-38"></a>    load_best_model_at_end<span class="op">=</span><span class="va">True</span>,  <span class="co"># Leo for early stopping</span></span>
+<span id="cb8-39"><a href="#cb8-39"></a>    greater_is_better<span class="op">=</span><span class="va">False</span>, <span class="co"># Leo for early stopping</span></span>
+<span id="cb8-40"><a href="#cb8-40"></a>  push_to_hub<span class="op">=</span><span class="va">False</span></span>
+<span id="cb8-41"><a href="#cb8-41"></a>)</span>
+<span id="cb8-42"><a href="#cb8-42"></a></span>
+<span id="cb8-43"><a href="#cb8-43"></a>trainer <span class="op">=</span> Trainer(</span>
+<span id="cb8-44"><a href="#cb8-44"></a>    model<span class="op">=</span>model,</span>
+<span id="cb8-45"><a href="#cb8-45"></a>    data_collator<span class="op">=</span>data_collator,</span>
+<span id="cb8-46"><a href="#cb8-46"></a>    args<span class="op">=</span>training_args,</span>
+<span id="cb8-47"><a href="#cb8-47"></a>    compute_metrics<span class="op">=</span>compute_metrics,</span>
+<span id="cb8-48"><a href="#cb8-48"></a>    train_dataset<span class="op">=</span>common_voice_train,</span>
+<span id="cb8-49"><a href="#cb8-49"></a>    eval_dataset<span class="op">=</span>common_voice_test,</span>
+<span id="cb8-50"><a href="#cb8-50"></a>    tokenizer<span class="op">=</span>processor.feature_extractor</span>
+<span id="cb8-51"><a href="#cb8-51"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="attaching-a-language-model" class="slide level2">
 <h2>Attaching a language model</h2>
@@ -847,21 +860,95 @@ Peter Gilles
 <section id="openais-whisper-radfordrobustspeechrecognition2022" class="slide level2">
 <h2>OpenAI’s Whisper (<span class="citation" data-cites="radfordRobustSpeechRecognition2022">Radford et al. (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span>)</h2>
 <ul>
-<li><p>Introduced in September 2022</p></li>
-<li><p>Sequence-to-sequence (seq2seq) architecture to learn the contextual representation of speech data</p></li>
-<li><p>680,000 hours of training data from many languages, with transcriptions (e.g.&nbsp;YouTube videos)</p></li>
-<li><p>‘weakly-supervised’ pretraining</p></li>
-<li><p>Pre-training with up to 1.5 billion of parameters</p></li>
-<li><p>Luxembourgish included as language</p>
+<li>Introduced in September 2022</li>
+<li>Sequence-to-sequence (seq2seq) architecture to learn the contextual representation of speech data</li>
+<li>680,000 hours of training data from many languages, with transcriptions (e.g.&nbsp;YouTube videos)</li>
+<li>‘weakly-supervised’ pretraining</li>
+<li>Pre-training with up to 1.5 billion of parameters</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Size</th>
+<th>Layers</th>
+<th>Width</th>
+<th>Heads</th>
+<th>Parameters</th>
+<th>English-only</th>
+<th>Multilingual</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>tiny</td>
+<td>4</td>
+<td>38</td>
+<td>6</td>
+<td>39 M</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>base</td>
+<td>6</td>
+<td>512</td>
+<td>8</td>
+<td>74 M</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>small</td>
+<td>12</td>
+<td>768</td>
+<td>12</td>
+<td>244 M</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>medium</td>
+<td>24</td>
+<td>1024</td>
+<td>16</td>
+<td>769 M</td>
+<td>✓</td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>large</td>
+<td>32</td>
+<td>1280</td>
+<td>20</td>
+<td>1550 M</td>
+<td>x</td>
+<td>✓</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Luxembourgish included as language
 <ul>
 <li>with very bad quality, though ;-)</li>
 </ul></li>
-<li><p>Building blocks of Whisper <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/761e1554-3424-44c8-b4f8-3e203cf36f7e-1-4a62c4bf-6230-4349-85c7-3191cbad8d91.png"></p></li>
-<li><p>Fine-tuning with our dataset</p></li>
+<li>Fine-tuning with our dataset</li>
 </ul>
 </section>
-<section id="evaluation" class="slide level2">
-<h2>Evaluation</h2>
+<section id="whisper" class="slide level2">
+<h2>Whisper</h2>
+<ul>
+<li><p>Building blocks of Whisper <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-2-3a2a54f2-c345-408c-8194-1b464a8e184f.png"></p></li>
+<li><p>Performance of Whisper (Word Error Rate) <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-1-3741c1d2-45eb-48fd-9748-8c9fe46808ae.png"></p></li>
+</ul>
+</section>
+<section id="evaluation-of-wav2vec-2.0-and-whisper" class="slide level2">
+<h2>Evaluation of wav2vec 2.0 and Whisper</h2>
 <audio controls="" src="Chamber2022.wav">
 </audio>
 <table>
@@ -886,7 +973,7 @@ Peter Gilles
 </tbody>
 </table>
 </section>
-<section id="evaluation-1" class="slide level2">
+<section id="evaluation" class="slide level2">
 <h2>Evaluation</h2>
 <ul>
 <li>Word Error Rates (WER)
@@ -902,8 +989,8 @@ Peter Gilles
 </ul></li>
 </ul>
 </section>
-<section id="multilingual-asr" class="slide level2">
-<h2>Multilingual ASR</h2>
+<section id="next-challenge-multilingual-asr" class="slide level2">
+<h2>Next challenge: Multilingual ASR</h2>
 <audio controls="" src="Grand_Duc_2018.wav">
 </audio>
 <table>
@@ -923,12 +1010,8 @@ Peter Gilles
 <td>Mir sollen houfreg sinn op d’Diversitéit an den Zesummenhalt an eise Gesellschaft. <strong>A cet endroit, je voudrais remercier les non luxembourgeois qui resident ou qui travaillent à notre pays pour leur contribution précieuse à notre société. cohésion économique, mais aussi la cohésion sociale de notre pays sont des atouts qui nous appartiennent de défendre à tout prix. Ils sont au coeur de notre projet et de notre réussite. C’ est notre bien commun à tous.</strong> Haut, op dësem chrëschtel Wënd, wëll ech meng Unerkennung awer net nëmmen op de politesche Plang begrenzen.</td>
 </tr>
 <tr class="even">
-<td>—–</td>
-<td>—–</td>
-</tr>
-<tr class="odd">
-<td>Problems with French part</td>
-<td>French switch recognised</td>
+<td>&gt; <em>Problems with French part</em></td>
+<td>&gt; <em>French switch recognised</em></td>
 </tr>
 </tbody>
 </table>
@@ -937,6 +1020,12 @@ Peter Gilles
 <h2>Demos</h2>
 <ul>
 <li>Available online at Hugging Face: <a href="https://huggingface.co/unilux" class="uri">https://huggingface.co/unilux</a></li>
+<li>Further reading
+<ul>
+<li><span class="citation" data-cites="nguyen2022">Nguyen (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></li>
+<li><span class="citation" data-cites="gillesLUXASRBuildingASR2023">Gilles, Hosseini Kivanani, and Hillah (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></li>
+<li><span class="citation" data-cites="gillesASRLUXAUTOMATICSPEECHinpress">Gilles, Hosseini Kivanani, and Hillah (<a href="#/references" role="doc-biblioref" onclick="">n.d.</a>)</span></li>
+</ul></li>
 </ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
@@ -951,11 +1040,20 @@ Boigne, Jonathan. 2021. <span>“A <span>Timeline</span> of <span>Large</span> <
 <div id="ref-FineTuneWav2Vec2English" class="csl-entry" role="listitem">
 <span>“Fine-<span>Tune</span> <span>Wav2Vec2</span> for <span>English</span> <span>ASR</span> in <span>Hugging</span> <span>Face</span> with 🤗 <span>Transformers</span>.”</span> n.d. Accessed May 9, 2023. <a href="https://huggingface.co/blog/fine-tune-wav2vec2-english">https://huggingface.co/blog/fine-tune-wav2vec2-english</a>.
 </div>
+<div id="ref-gillesLUXASRBuildingASR2023" class="csl-entry" role="listitem">
+Gilles, Peter, Nina Hosseini Kivanani, and Léopold Edem Ayité Hillah. 2023. <span>“<span>LUX</span>-<span>ASR</span>: <span>Building</span> an <span>ASR</span> System for the <span>Luxembourgish</span> Language.”</span> In <em>Proceedings - 2022 <span>IEEE</span> <span>Spoken</span> <span>Language</span> <span>Technology</span> <span>Workshop</span> (<span>SLT</span>)</em>, 1147–49. Doha, Qatar. <a href="https://orbilu.uni.lu/handle/10993/55105">https://orbilu.uni.lu/handle/10993/55105</a>.
+</div>
+<div id="ref-gillesASRLUXAUTOMATICSPEECHinpress" class="csl-entry" role="listitem">
+———. n.d. <span>“<span>ASRLUX</span>: <span>AUTOMATIC</span> <span>SPEECH</span> <span>RECOGNITION</span> <span>FOR</span> <span>THE</span> <span>LOW</span>-<span>RESOURCE</span> <span>LANGUAGE</span> <span>LUXEMBOURGISH</span>.”</span> In <em>Proceedings <span>ICPhS</span> 2023</em>. Prague.
+</div>
 <div id="ref-huiSpeechRecognitionFeature2019" class="csl-entry" role="listitem">
 Hui, Jonathan. 2019. <span>“Speech <span>Recognition</span> — <span>Feature</span> <span>Extraction</span> <span>MFCC</span> &amp; <span>PLP</span>.”</span> <em>Medium</em>. <a href="https://jonathan-hui.medium.com/speech-recognition-feature-extraction-mfcc-plp-5455f5a69dd9">https://jonathan-hui.medium.com/speech-recognition-feature-extraction-mfcc-plp-5455f5a69dd9</a>.
 </div>
 <div id="ref-huiSpeechRecognitionPhonetics2022" class="csl-entry" role="listitem">
 ———. 2022. <span>“Speech <span>Recognition</span> — <span>Phonetics</span>.”</span> <em>Medium</em>. <a href="https://jonathan-hui.medium.com/speech-recognition-phonetics-d761ea1710c0">https://jonathan-hui.medium.com/speech-recognition-phonetics-d761ea1710c0</a>.
+</div>
+<div id="ref-nguyen2022" class="csl-entry" role="listitem">
+Nguyen, Le Minh. 2022. <span>“Improving Luxembourgish Speech Recognition with Cross-Lingual Speech Representations.”</span> Master’s thesis, Master thesis, Voice Technology (VT), University of Groningen.
 </div>
 <div id="ref-radfordRobustSpeechRecognition2022" class="csl-entry" role="listitem">
 Radford, Alec, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ilya Sutskever. 2022. <span>“Robust <span>Speech</span> <span>Recognition</span> via <span>Large</span>-<span>Scale</span> <span>Weak</span> <span>Supervision</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2212.04356">https://doi.org/10.48550/arXiv.2212.04356</a>.
