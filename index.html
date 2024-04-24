@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/tabby.min.js"></script>
-<script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/popper.min.js"></script>
-<script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.333">
+<script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/tabby.min.js"></script>
+<script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/popper.min.js"></script>
+<script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.550">
 
   <meta name="author" content="Peter Gilles">
-  <meta name="dcterms.date" content="2023-05-10">
+  <meta name="dcterms.date" content="2024-04-24">
   <title>Automatic Speech recognition of Luxembourgish</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,7 +32,7 @@
     }
     /* CSS for syntax highlighting */
     pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span { line-height: 1.25; }
     pre > code.sourceCode > span:empty { height: 1.2em; }
     .sourceCode { overflow: visible; }
     code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -99,6 +99,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+      margin-bottom: 0em;
     }
     .hanging-indent div.csl-entry {
       margin-left:2em;
@@ -115,13 +116,13 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -243,7 +244,8 @@
   }
 
   .callout.callout-titled .callout-body > .callout-content > :last-child {
-    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
   }
 
   .callout.callout-titled .callout-icon::before {
@@ -424,9 +426,9 @@ Peter Gilles
 </div>
 </div>
 
-  <p class="date">2023-05-10</p>
+  <p class="date">2024-04-24</p>
 </section>
-<section id="structure-of-the-lecture" class="slide level2">
+<section id="structure-of-the-lecture" class="slide level2 scrollable">
 <h2>Structure of the lecture</h2>
 <ol type="1">
 <li>Introduction</li>
@@ -460,7 +462,7 @@ Peter Gilles
 </div><div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/629863a6-644e-4b31-902a-1f409e8fa497-1-513bd879-1536-4b1d-83d1-dad5da451ecf.png" style="width:60.0%"></p>
+<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/629863a6-644e-4b31-902a-1f409e8fa497-1-513bd879-1536-4b1d-83d1-dad5da451ecf.png" class="quarto-figure quarto-figure-left" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -497,7 +499,7 @@ Peter Gilles
 <h2>Dealing with audio data</h2>
 <ul>
 <li><p>Recommended overview: <span class="citation" data-cites="huiSpeechRecognitionPhonetics2022">Hui (<a href="#/references" role="doc-biblioref" onclick="">2022</a>)</span></p></li>
-<li><p>Acoustic representation of speech: continuous signal with amplitude modulation in time <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/180f0b35-9386-49bf-8e4b-5459668ce62c-1-1628698b-05e0-433b-93c3-b80c07282edb.png" alt="waveform"></p></li>
+<li><p>Acoustic representation of speech: continuous signal with amplitude modulation in time <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/180f0b35-9386-49bf-8e4b-5459668ce62c-1-1628698b-05e0-433b-93c3-b80c07282edb.png" alt="waveform"></p></li>
 <li><p>Incredibly variable, due to …</p>
 <ul>
 <li>accent</li>
@@ -514,7 +516,7 @@ Peter Gilles
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/180f0b35-9386-49bf-8e4b-5459668ce62c-2-9634cd64-767d-4da9-a152-75055119c352.png"></p>
+<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/180f0b35-9386-49bf-8e4b-5459668ce62c-2-9634cd64-767d-4da9-a152-75055119c352.png"></p>
 <figcaption>spectrogram</figcaption>
 </figure>
 </div>
@@ -528,7 +530,7 @@ Peter Gilles
 <li>10ms overlap</li>
 <li>capture all relevant linguistic information</li>
 <li>feature extraction: Mel-frequency cepstral coefficients (MFCC) or Mel spectrogram</li>
-<li>39 features per frame, stored as vector <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/a382c2c7-ec76-4d96-b016-1fb2b4d507cb-1-38aba670-424c-4143-843e-97113c382d4b.png" alt="from Hui (2019)"></li>
+<li>39 features per frame, stored as vector <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/a382c2c7-ec76-4d96-b016-1fb2b4d507cb-1-38aba670-424c-4143-843e-97113c382d4b.png" alt="from Hui (2019)"></li>
 </ul></li>
 </ul>
 </section>
@@ -539,7 +541,7 @@ Peter Gilles
 <ul>
 <li>Use a statistical model to recognise the correct text from a sequence of feature vectors</li>
 </ul></li>
-<li>Design of a traditional ASR system <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/e8ddec01-3648-4295-84ea-60c944da1611-1-72475551-1146-48be-9f0b-d0a17d290b2e.png" style="width:80.0%"></li>
+<li>Design of a traditional ASR system <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/e8ddec01-3648-4295-84ea-60c944da1611-1-72475551-1146-48be-9f0b-d0a17d290b2e.png" style="width:80.0%"></li>
 <li>Necessary ingredients for the model
 <ul>
 <li>acoustic model based on fine-grained annotated speech</li>
@@ -551,7 +553,7 @@ Peter Gilles
 <section id="basics-of-automatic-speech-recognition-1" class="slide level2">
 <h2>Basics of Automatic Speech Recognition</h2>
 <ul>
-<li><p>The rise of Deep Learning (DL) <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/643d0c9c-0319-44a4-88d5-2277d24e6db1-1-ae1b1b1c-a4f3-4cb2-b5fa-1cd2da84e6d0.png" alt="Boigne (2021)"></p></li>
+<li><p>The rise of Deep Learning (DL) <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/643d0c9c-0319-44a4-88d5-2277d24e6db1-1-ae1b1b1c-a4f3-4cb2-b5fa-1cd2da84e6d0.png" alt="Boigne (2021)"></p></li>
 <li><p>Transformer models</p>
 <ul>
 <li>accounting for context in a broad and flexible way</li>
@@ -579,7 +581,7 @@ Peter Gilles
 </ul></li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/5564cf63-c0d0-4024-bd4a-b71404a88caa-1-6a0f8388-2ce8-470d-9051-4ff34109c304.png"></p>
+<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/5564cf63-c0d0-4024-bd4a-b71404a88caa-1-6a0f8388-2ce8-470d-9051-4ff34109c304.png"></p>
 </div>
 </div>
 </section>
@@ -635,7 +637,7 @@ Peter Gilles
 <li>Trained on 0.5 million hours of speech from 128 languages</li>
 <li>Pre-training with up to 1 billion of parameters</li>
 <li>Highly useful for low-resource languages by building upon similar structures from related languages, i.e.&nbsp;German, Dutch, French</li>
-<li>Components of Wav2vec 2.0 <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/a1bc37ab-9c55-4ccc-86c0-c28515663f7a-1-6c0dd04c-d39e-4538-a764-6426877a4064.png" alt="(FineTuneWav2Vec2English?)"></li>
+<li>Components of Wav2vec 2.0 <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/a1bc37ab-9c55-4ccc-86c0-c28515663f7a-1-6c0dd04c-d39e-4538-a764-6426877a4064.png" alt="(FineTuneWav2Vec2English?)"></li>
 </ul>
 </section>
 <section id="preprocessing-for-fine-tuning" class="slide level2">
@@ -651,134 +653,134 @@ Peter Gilles
 <li>several cleaning steps of the text data</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Load raw data for training</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>df <span class="op">=</span>pd.read_csv(<span class="st">"./lux_train.csv"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3"></a>df[<span class="st">'sentence'</span>]<span class="op">=</span>df[<span class="st">'sentence'</span>].<span class="bu">apply</span>(<span class="bu">str</span>)</span>
-<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># replace numbers to text</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>df[<span class="st">'sentence'</span>]<span class="op">=</span>df[<span class="st">'sentence'</span>].<span class="bu">apply</span>(replaceInt)</span>
-<span id="cb1-6"><a href="#cb1-6"></a></span>
-<span id="cb1-7"><a href="#cb1-7"></a><span class="co"># define train and test split</span></span>
-<span id="cb1-8"><a href="#cb1-8"></a>train, test <span class="op">=</span> train_test_split(df, test_size<span class="op">=</span><span class="fl">0.15</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
-<span id="cb1-9"><a href="#cb1-9"></a></span>
-<span id="cb1-10"><a href="#cb1-10"></a>lux_voice_train <span class="op">=</span> Dataset.from_pandas(train)</span>
-<span id="cb1-11"><a href="#cb1-11"></a>lux_voice_test <span class="op">=</span> Dataset.from_pandas(test)</span>
-<span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># Cleaning of text data</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a>chars_to_ignore_regex <span class="op">=</span> <span class="st">'[\,\?\.\!\+\;\:</span><span class="ch">\"</span><span class="st">\“\&amp;\‘\”\�\(\)\&lt;\&gt;\«\»\„]'</span></span>
-<span id="cb1-15"><a href="#cb1-15"></a></span>
-<span id="cb1-16"><a href="#cb1-16"></a><span class="co"># convert, also to lower case!</span></span>
-<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">def</span> remove_special_characters(batch):</span>
-<span id="cb1-18"><a href="#cb1-18"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(chars_to_ignore_regex, <span class="st">''</span>, batch[<span class="st">"sentence"</span>]).lower() <span class="op">+</span> <span class="st">" "</span></span>
-<span id="cb1-19"><a href="#cb1-19"></a>    <span class="cf">return</span> batch</span>
-<span id="cb1-20"><a href="#cb1-20"></a></span>
-<span id="cb1-21"><a href="#cb1-21"></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(remove_special_characters)</span>
-<span id="cb1-22"><a href="#cb1-22"></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(remove_special_characters)</span>
-<span id="cb1-23"><a href="#cb1-23"></a></span>
-<span id="cb1-24"><a href="#cb1-24"></a><span class="co"># replacing special characters</span></span>
-<span id="cb1-25"><a href="#cb1-25"></a><span class="kw">def</span> replace_hatted_characters(batch):</span>
-<span id="cb1-26"><a href="#cb1-26"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[â]'</span>, <span class="st">'a'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-27"><a href="#cb1-27"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[î]'</span>, <span class="st">'i'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-28"><a href="#cb1-28"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ô]'</span>, <span class="st">'o'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-29"><a href="#cb1-29"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[û]'</span>, <span class="st">'u'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-30"><a href="#cb1-30"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ê]'</span>, <span class="st">'e'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-31"><a href="#cb1-31"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ï]'</span>, <span class="st">'i'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-32"><a href="#cb1-32"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ή]'</span>, <span class="st">'n'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-33"><a href="#cb1-33"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ß]'</span>, <span class="st">'ss'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-34"><a href="#cb1-34"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ñ]'</span>, <span class="st">'n'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-35"><a href="#cb1-35"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[/]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-36"><a href="#cb1-36"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[’]'</span>, <span class="st">'</span><span class="ch">\'</span><span class="st">'</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-37"><a href="#cb1-37"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[°]'</span>, <span class="st">' grad '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-38"><a href="#cb1-38"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[%]'</span>, <span class="st">' prozent '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-39"><a href="#cb1-39"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[@]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-40"><a href="#cb1-40"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[#]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-41"><a href="#cb1-41"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[_]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-42"><a href="#cb1-42"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[–]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-43"><a href="#cb1-43"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[-]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-44"><a href="#cb1-44"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[</span><span class="ch">\\</span><span class="st">xad]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-45"><a href="#cb1-45"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[</span><span class="ch">\\</span><span class="st">x01]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-46"><a href="#cb1-46"></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'  '</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
-<span id="cb1-47"><a href="#cb1-47"></a>    <span class="cf">return</span> batch</span>
-<span id="cb1-48"><a href="#cb1-48"></a></span>
-<span id="cb1-49"><a href="#cb1-49"></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(replace_hatted_characters)</span>
-<span id="cb1-50"><a href="#cb1-50"></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(replace_hatted_characters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="co"># Load raw data for training</span></span>
+<span id="cb1-2"><a href=""></a>df <span class="op">=</span>pd.read_csv(<span class="st">"./lux_train.csv"</span>)</span>
+<span id="cb1-3"><a href=""></a>df[<span class="st">'sentence'</span>]<span class="op">=</span>df[<span class="st">'sentence'</span>].<span class="bu">apply</span>(<span class="bu">str</span>)</span>
+<span id="cb1-4"><a href=""></a><span class="co"># replace numbers to text</span></span>
+<span id="cb1-5"><a href=""></a>df[<span class="st">'sentence'</span>]<span class="op">=</span>df[<span class="st">'sentence'</span>].<span class="bu">apply</span>(replaceInt)</span>
+<span id="cb1-6"><a href=""></a></span>
+<span id="cb1-7"><a href=""></a><span class="co"># define train and test split</span></span>
+<span id="cb1-8"><a href=""></a>train, test <span class="op">=</span> train_test_split(df, test_size<span class="op">=</span><span class="fl">0.15</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb1-9"><a href=""></a></span>
+<span id="cb1-10"><a href=""></a>lux_voice_train <span class="op">=</span> Dataset.from_pandas(train)</span>
+<span id="cb1-11"><a href=""></a>lux_voice_test <span class="op">=</span> Dataset.from_pandas(test)</span>
+<span id="cb1-12"><a href=""></a></span>
+<span id="cb1-13"><a href=""></a><span class="co"># Cleaning of text data</span></span>
+<span id="cb1-14"><a href=""></a>chars_to_ignore_regex <span class="op">=</span> <span class="st">'[\,\?\.\!\+\;\:</span><span class="ch">\"</span><span class="st">\“\&amp;\‘\”\�\(\)\&lt;\&gt;\«\»\„]'</span></span>
+<span id="cb1-15"><a href=""></a></span>
+<span id="cb1-16"><a href=""></a><span class="co"># convert, also to lower case!</span></span>
+<span id="cb1-17"><a href=""></a><span class="kw">def</span> remove_special_characters(batch):</span>
+<span id="cb1-18"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(chars_to_ignore_regex, <span class="st">''</span>, batch[<span class="st">"sentence"</span>]).lower() <span class="op">+</span> <span class="st">" "</span></span>
+<span id="cb1-19"><a href=""></a>    <span class="cf">return</span> batch</span>
+<span id="cb1-20"><a href=""></a></span>
+<span id="cb1-21"><a href=""></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(remove_special_characters)</span>
+<span id="cb1-22"><a href=""></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(remove_special_characters)</span>
+<span id="cb1-23"><a href=""></a></span>
+<span id="cb1-24"><a href=""></a><span class="co"># replacing special characters</span></span>
+<span id="cb1-25"><a href=""></a><span class="kw">def</span> replace_hatted_characters(batch):</span>
+<span id="cb1-26"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[â]'</span>, <span class="st">'a'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-27"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[î]'</span>, <span class="st">'i'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-28"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ô]'</span>, <span class="st">'o'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-29"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[û]'</span>, <span class="st">'u'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-30"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ê]'</span>, <span class="st">'e'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-31"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ï]'</span>, <span class="st">'i'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-32"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ή]'</span>, <span class="st">'n'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-33"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ß]'</span>, <span class="st">'ss'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-34"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[ñ]'</span>, <span class="st">'n'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-35"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[/]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-36"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[’]'</span>, <span class="st">'</span><span class="ch">\'</span><span class="st">'</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-37"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[°]'</span>, <span class="st">' grad '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-38"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[%]'</span>, <span class="st">' prozent '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-39"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[@]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-40"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[#]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-41"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[_]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-42"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[–]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-43"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[-]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-44"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[</span><span class="ch">\\</span><span class="st">xad]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-45"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'[</span><span class="ch">\\</span><span class="st">x01]'</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-46"><a href=""></a>    batch[<span class="st">"sentence"</span>] <span class="op">=</span> re.sub(<span class="st">'  '</span>, <span class="st">' '</span>, batch[<span class="st">"sentence"</span>])</span>
+<span id="cb1-47"><a href=""></a>    <span class="cf">return</span> batch</span>
+<span id="cb1-48"><a href=""></a></span>
+<span id="cb1-49"><a href=""></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(replace_hatted_characters)</span>
+<span id="cb1-50"><a href=""></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(replace_hatted_characters)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="preprocessing-for-fine-tuning-1" class="slide level2">
 <h2>Preprocessing for fine-tuning</h2>
 <ul>
 <li>Extract all distinct letters</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">def</span> extract_all_chars(batch):</span>
-<span id="cb2-2"><a href="#cb2-2"></a>  all_text <span class="op">=</span> <span class="st">" "</span>.join(batch[<span class="st">"sentence"</span>])</span>
-<span id="cb2-3"><a href="#cb2-3"></a>  vocab <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(all_text))</span>
-<span id="cb2-4"><a href="#cb2-4"></a>  <span class="cf">return</span> {<span class="st">"vocab"</span>: [vocab], <span class="st">"all_text"</span>: [all_text]}</span>
-<span id="cb2-5"><a href="#cb2-5"></a></span>
-<span id="cb2-6"><a href="#cb2-6"></a>vocab_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(extract_all_chars, batched<span class="op">=</span><span class="va">True</span>, batch_size<span class="op">=-</span><span class="dv">1</span>, keep_in_memory<span class="op">=</span><span class="va">True</span>, remove_columns<span class="op">=</span>lux_voice_train.column_names)</span>
-<span id="cb2-7"><a href="#cb2-7"></a>vocab_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(extract_all_chars, batched<span class="op">=</span><span class="va">True</span>, batch_size<span class="op">=-</span><span class="dv">1</span>, keep_in_memory<span class="op">=</span><span class="va">True</span>, remove_columns<span class="op">=</span>lux_voice_test.column_names)</span>
-<span id="cb2-8"><a href="#cb2-8"></a></span>
-<span id="cb2-9"><a href="#cb2-9"></a>vocab_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(vocab_train[<span class="st">"vocab"</span>][<span class="dv">0</span>]) <span class="op">|</span> <span class="bu">set</span>(vocab_test[<span class="st">"vocab"</span>][<span class="dv">0</span>]))</span>
-<span id="cb2-10"><a href="#cb2-10"></a></span>
-<span id="cb2-11"><a href="#cb2-11"></a>vocab_dict <span class="op">=</span> {v: k <span class="cf">for</span> k, v <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">sorted</span>(vocab_list))}</span>
-<span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(vocab_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a><span class="kw">def</span> extract_all_chars(batch):</span>
+<span id="cb2-2"><a href=""></a>  all_text <span class="op">=</span> <span class="st">" "</span>.join(batch[<span class="st">"sentence"</span>])</span>
+<span id="cb2-3"><a href=""></a>  vocab <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(all_text))</span>
+<span id="cb2-4"><a href=""></a>  <span class="cf">return</span> {<span class="st">"vocab"</span>: [vocab], <span class="st">"all_text"</span>: [all_text]}</span>
+<span id="cb2-5"><a href=""></a></span>
+<span id="cb2-6"><a href=""></a>vocab_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(extract_all_chars, batched<span class="op">=</span><span class="va">True</span>, batch_size<span class="op">=-</span><span class="dv">1</span>, keep_in_memory<span class="op">=</span><span class="va">True</span>, remove_columns<span class="op">=</span>lux_voice_train.column_names)</span>
+<span id="cb2-7"><a href=""></a>vocab_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(extract_all_chars, batched<span class="op">=</span><span class="va">True</span>, batch_size<span class="op">=-</span><span class="dv">1</span>, keep_in_memory<span class="op">=</span><span class="va">True</span>, remove_columns<span class="op">=</span>lux_voice_test.column_names)</span>
+<span id="cb2-8"><a href=""></a></span>
+<span id="cb2-9"><a href=""></a>vocab_list <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(vocab_train[<span class="st">"vocab"</span>][<span class="dv">0</span>]) <span class="op">|</span> <span class="bu">set</span>(vocab_test[<span class="st">"vocab"</span>][<span class="dv">0</span>]))</span>
+<span id="cb2-10"><a href=""></a></span>
+<span id="cb2-11"><a href=""></a>vocab_dict <span class="op">=</span> {v: k <span class="cf">for</span> k, v <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="bu">sorted</span>(vocab_list))}</span>
+<span id="cb2-12"><a href=""></a><span class="bu">print</span>(vocab_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Vocabulary dictionary containing all letters in the training data</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>{<span class="st">' '</span>: <span class="dv">0</span>, <span class="st">'$'</span>: <span class="dv">1</span>, <span class="st">"'"</span>: <span class="dv">2</span>, <span class="st">'0'</span>: <span class="dv">3</span>, <span class="st">'1'</span>: <span class="dv">4</span>, <span class="st">'2'</span>: <span class="dv">5</span>, <span class="st">'3'</span>: <span class="dv">6</span>, <span class="st">'4'</span>: <span class="dv">7</span>, <span class="st">'5'</span>: <span class="dv">8</span>, <span class="st">'6'</span>: <span class="dv">9</span>, <span class="st">'7'</span>: <span class="dv">10</span>, <span class="st">'8'</span>: <span class="dv">11</span>, <span class="st">'9'</span>: <span class="dv">12</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">'</span>: <span class="dv">13</span>, <span class="st">'^'</span>: <span class="dv">14</span>, <span class="st">'a'</span>: <span class="dv">15</span>, <span class="st">'b'</span>: <span class="dv">16</span>, <span class="st">'c'</span>: <span class="dv">17</span>, <span class="st">'d'</span>: <span class="dv">18</span>, <span class="st">'e'</span>: <span class="dv">19</span>, <span class="st">'f'</span>: <span class="dv">20</span>, <span class="st">'g'</span>: <span class="dv">21</span>, <span class="st">'h'</span>: <span class="dv">22</span>, <span class="st">'i'</span>: <span class="dv">23</span>, <span class="st">'j'</span>: <span class="dv">24</span>, <span class="st">'k'</span>: <span class="dv">25</span>, <span class="st">'l'</span>: <span class="dv">26</span>, <span class="st">'m'</span>: <span class="dv">27</span>, <span class="st">'n'</span>: <span class="dv">28</span>, <span class="st">'o'</span>: <span class="dv">29</span>, <span class="st">'p'</span>: <span class="dv">30</span>, <span class="st">'q'</span>: <span class="dv">31</span>, <span class="st">'r'</span>: <span class="dv">32</span>, <span class="st">'s'</span>: <span class="dv">33</span>, <span class="st">'t'</span>: <span class="dv">34</span>, <span class="st">'u'</span>: <span class="dv">35</span>, <span class="st">'v'</span>: <span class="dv">36</span>, <span class="st">'w'</span>: <span class="dv">37</span>, <span class="st">'x'</span>: <span class="dv">38</span>, <span class="st">'y'</span>: <span class="dv">39</span>, <span class="st">'z'</span>: <span class="dv">40</span>, <span class="st">'à'</span>: <span class="dv">41</span>, <span class="st">'á'</span>: <span class="dv">42</span>, <span class="st">'ä'</span>: <span class="dv">43</span>, <span class="st">'ç'</span>: <span class="dv">44</span>, <span class="st">'è'</span>: <span class="dv">45</span>, <span class="st">'é'</span>: <span class="dv">46</span>, <span class="st">'ë'</span>: <span class="dv">47</span>, <span class="st">'ö'</span>: <span class="dv">48</span>, <span class="st">'ú'</span>: <span class="dv">49</span>, <span class="st">'ü'</span>: <span class="dv">50</span>, <span class="st">'œ'</span>: <span class="dv">51</span>, <span class="st">'‚'</span>: <span class="dv">52</span>, <span class="st">'…'</span>: <span class="dv">53</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>{<span class="st">' '</span>: <span class="dv">0</span>, <span class="st">'$'</span>: <span class="dv">1</span>, <span class="st">"'"</span>: <span class="dv">2</span>, <span class="st">'0'</span>: <span class="dv">3</span>, <span class="st">'1'</span>: <span class="dv">4</span>, <span class="st">'2'</span>: <span class="dv">5</span>, <span class="st">'3'</span>: <span class="dv">6</span>, <span class="st">'4'</span>: <span class="dv">7</span>, <span class="st">'5'</span>: <span class="dv">8</span>, <span class="st">'6'</span>: <span class="dv">9</span>, <span class="st">'7'</span>: <span class="dv">10</span>, <span class="st">'8'</span>: <span class="dv">11</span>, <span class="st">'9'</span>: <span class="dv">12</span>, <span class="st">'</span><span class="ch">\\</span><span class="st">'</span>: <span class="dv">13</span>, <span class="st">'^'</span>: <span class="dv">14</span>, <span class="st">'a'</span>: <span class="dv">15</span>, <span class="st">'b'</span>: <span class="dv">16</span>, <span class="st">'c'</span>: <span class="dv">17</span>, <span class="st">'d'</span>: <span class="dv">18</span>, <span class="st">'e'</span>: <span class="dv">19</span>, <span class="st">'f'</span>: <span class="dv">20</span>, <span class="st">'g'</span>: <span class="dv">21</span>, <span class="st">'h'</span>: <span class="dv">22</span>, <span class="st">'i'</span>: <span class="dv">23</span>, <span class="st">'j'</span>: <span class="dv">24</span>, <span class="st">'k'</span>: <span class="dv">25</span>, <span class="st">'l'</span>: <span class="dv">26</span>, <span class="st">'m'</span>: <span class="dv">27</span>, <span class="st">'n'</span>: <span class="dv">28</span>, <span class="st">'o'</span>: <span class="dv">29</span>, <span class="st">'p'</span>: <span class="dv">30</span>, <span class="st">'q'</span>: <span class="dv">31</span>, <span class="st">'r'</span>: <span class="dv">32</span>, <span class="st">'s'</span>: <span class="dv">33</span>, <span class="st">'t'</span>: <span class="dv">34</span>, <span class="st">'u'</span>: <span class="dv">35</span>, <span class="st">'v'</span>: <span class="dv">36</span>, <span class="st">'w'</span>: <span class="dv">37</span>, <span class="st">'x'</span>: <span class="dv">38</span>, <span class="st">'y'</span>: <span class="dv">39</span>, <span class="st">'z'</span>: <span class="dv">40</span>, <span class="st">'à'</span>: <span class="dv">41</span>, <span class="st">'á'</span>: <span class="dv">42</span>, <span class="st">'ä'</span>: <span class="dv">43</span>, <span class="st">'ç'</span>: <span class="dv">44</span>, <span class="st">'è'</span>: <span class="dv">45</span>, <span class="st">'é'</span>: <span class="dv">46</span>, <span class="st">'ë'</span>: <span class="dv">47</span>, <span class="st">'ö'</span>: <span class="dv">48</span>, <span class="st">'ú'</span>: <span class="dv">49</span>, <span class="st">'ü'</span>: <span class="dv">50</span>, <span class="st">'œ'</span>: <span class="dv">51</span>, <span class="st">'‚'</span>: <span class="dv">52</span>, <span class="st">'…'</span>: <span class="dv">53</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="preprocessing-for-fine-tuning-2" class="slide level2">
 <h2>Preprocessing for fine-tuning</h2>
 <ul>
 <li>Convert the audio data to vectors</li>
 </ul>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> speech_file_to_array_fn(batch):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    speech_array, sampling_rate <span class="op">=</span> sf.read(batch[<span class="st">"path"</span>])</span>
-<span id="cb4-3"><a href="#cb4-3"></a>    batch[<span class="st">"speech"</span>] <span class="op">=</span> speech_array</span>
-<span id="cb4-4"><a href="#cb4-4"></a>    batch[<span class="st">"sampling_rate"</span>] <span class="op">=</span> sampling_rate</span>
-<span id="cb4-5"><a href="#cb4-5"></a>    batch[<span class="st">"target_text"</span>] <span class="op">=</span> batch[<span class="st">"sentence"</span>]</span>
-<span id="cb4-6"><a href="#cb4-6"></a>    <span class="cf">return</span> batch</span>
-<span id="cb4-7"><a href="#cb4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8"></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(speech_file_to_array_fn, remove_columns<span class="op">=</span>lux_voice_train.column_names,num_proc<span class="op">=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="kw">def</span> speech_file_to_array_fn(batch):</span>
+<span id="cb4-2"><a href=""></a>    speech_array, sampling_rate <span class="op">=</span> sf.read(batch[<span class="st">"path"</span>])</span>
+<span id="cb4-3"><a href=""></a>    batch[<span class="st">"speech"</span>] <span class="op">=</span> speech_array</span>
+<span id="cb4-4"><a href=""></a>    batch[<span class="st">"sampling_rate"</span>] <span class="op">=</span> sampling_rate</span>
+<span id="cb4-5"><a href=""></a>    batch[<span class="st">"target_text"</span>] <span class="op">=</span> batch[<span class="st">"sentence"</span>]</span>
+<span id="cb4-6"><a href=""></a>    <span class="cf">return</span> batch</span>
+<span id="cb4-7"><a href=""></a></span>
+<span id="cb4-8"><a href=""></a>lux_voice_train <span class="op">=</span> lux_voice_train.<span class="bu">map</span>(speech_file_to_array_fn, remove_columns<span class="op">=</span>lux_voice_train.column_names,num_proc<span class="op">=</span><span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Prepare the model tokenizer, feature extractor and processor</li>
 </ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2CTCTokenizer</span>
-<span id="cb5-2"><a href="#cb5-2"></a>tokenizer <span class="op">=</span> Wav2Vec2CTCTokenizer(<span class="st">"./vocab.json"</span>, unk_token<span class="op">=</span><span class="st">"[UNK]"</span>, pad_token<span class="op">=</span><span class="st">"[PAD]"</span>, word_delimiter_token<span class="op">=</span><span class="st">"|"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3"></a></span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2FeatureExtractor</span>
-<span id="cb5-5"><a href="#cb5-5"></a>feature_extractor <span class="op">=</span> Wav2Vec2FeatureExtractor(feature_size<span class="op">=</span><span class="dv">1</span>, sampling_rate<span class="op">=</span><span class="dv">16000</span>, padding_value<span class="op">=</span><span class="fl">0.0</span>, do_normalize<span class="op">=</span><span class="va">True</span>, return_attention_mask<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb5-6"><a href="#cb5-6"></a></span>
-<span id="cb5-7"><a href="#cb5-7"></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2Processor</span>
-<span id="cb5-8"><a href="#cb5-8"></a>processor <span class="op">=</span> Wav2Vec2Processor(feature_extractor<span class="op">=</span>feature_extractor, tokenizer<span class="op">=</span>tokenizer)</span>
-<span id="cb5-9"><a href="#cb5-9"></a></span>
-<span id="cb5-10"><a href="#cb5-10"></a>processor.save_pretrained(<span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH_NEW_DATASET"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2CTCTokenizer</span>
+<span id="cb5-2"><a href=""></a>tokenizer <span class="op">=</span> Wav2Vec2CTCTokenizer(<span class="st">"./vocab.json"</span>, unk_token<span class="op">=</span><span class="st">"[UNK]"</span>, pad_token<span class="op">=</span><span class="st">"[PAD]"</span>, word_delimiter_token<span class="op">=</span><span class="st">"|"</span>)</span>
+<span id="cb5-3"><a href=""></a></span>
+<span id="cb5-4"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2FeatureExtractor</span>
+<span id="cb5-5"><a href=""></a>feature_extractor <span class="op">=</span> Wav2Vec2FeatureExtractor(feature_size<span class="op">=</span><span class="dv">1</span>, sampling_rate<span class="op">=</span><span class="dv">16000</span>, padding_value<span class="op">=</span><span class="fl">0.0</span>, do_normalize<span class="op">=</span><span class="va">True</span>, return_attention_mask<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-6"><a href=""></a></span>
+<span id="cb5-7"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> Wav2Vec2Processor</span>
+<span id="cb5-8"><a href=""></a>processor <span class="op">=</span> Wav2Vec2Processor(feature_extractor<span class="op">=</span>feature_extractor, tokenizer<span class="op">=</span>tokenizer)</span>
+<span id="cb5-9"><a href=""></a></span>
+<span id="cb5-10"><a href=""></a>processor.save_pretrained(<span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH_NEW_DATASET"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Preprocess the audio vectors and labels with the Wav2Vec2ForCTC processor</li>
 </ul>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> prepare_dataset(batch):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    <span class="co"># check that all files have the correct sampling rate</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>    <span class="cf">assert</span> (</span>
-<span id="cb6-4"><a href="#cb6-4"></a>        <span class="bu">len</span>(<span class="bu">set</span>(batch[<span class="st">"sampling_rate"</span>])) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb6-5"><a href="#cb6-5"></a>    ), <span class="ss">f"Make sure all inputs have the same sampling rate of </span><span class="sc">{</span>processor<span class="sc">.</span>feature_extractor<span class="sc">.</span>sampling_rate<span class="sc">}</span><span class="ss">."</span></span>
-<span id="cb6-6"><a href="#cb6-6"></a></span>
-<span id="cb6-7"><a href="#cb6-7"></a>    batch[<span class="st">"input_values"</span>] <span class="op">=</span> processor(batch[<span class="st">"speech"</span>], sampling_rate<span class="op">=</span>batch[<span class="st">"sampling_rate"</span>][<span class="dv">0</span>]).input_values</span>
-<span id="cb6-8"><a href="#cb6-8"></a>    </span>
-<span id="cb6-9"><a href="#cb6-9"></a>    <span class="cf">with</span> processor.as_target_processor():</span>
-<span id="cb6-10"><a href="#cb6-10"></a>        batch[<span class="st">"labels"</span>] <span class="op">=</span> processor(batch[<span class="st">"target_text"</span>]).input_ids</span>
-<span id="cb6-11"><a href="#cb6-11"></a>    <span class="cf">return</span> batch</span>
-<span id="cb6-12"><a href="#cb6-12"></a>    </span>
-<span id="cb6-13"><a href="#cb6-13"></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(prepare_dataset, remove_columns<span class="op">=</span>lux_voice_test.column_names, batch_size<span class="op">=</span><span class="dv">8</span>, num_proc<span class="op">=</span><span class="dv">8</span>, batched<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="kw">def</span> prepare_dataset(batch):</span>
+<span id="cb6-2"><a href=""></a>    <span class="co"># check that all files have the correct sampling rate</span></span>
+<span id="cb6-3"><a href=""></a>    <span class="cf">assert</span> (</span>
+<span id="cb6-4"><a href=""></a>        <span class="bu">len</span>(<span class="bu">set</span>(batch[<span class="st">"sampling_rate"</span>])) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb6-5"><a href=""></a>    ), <span class="ss">f"Make sure all inputs have the same sampling rate of </span><span class="sc">{</span>processor<span class="sc">.</span>feature_extractor<span class="sc">.</span>sampling_rate<span class="sc">}</span><span class="ss">."</span></span>
+<span id="cb6-6"><a href=""></a></span>
+<span id="cb6-7"><a href=""></a>    batch[<span class="st">"input_values"</span>] <span class="op">=</span> processor(batch[<span class="st">"speech"</span>], sampling_rate<span class="op">=</span>batch[<span class="st">"sampling_rate"</span>][<span class="dv">0</span>]).input_values</span>
+<span id="cb6-8"><a href=""></a>    </span>
+<span id="cb6-9"><a href=""></a>    <span class="cf">with</span> processor.as_target_processor():</span>
+<span id="cb6-10"><a href=""></a>        batch[<span class="st">"labels"</span>] <span class="op">=</span> processor(batch[<span class="st">"target_text"</span>]).input_ids</span>
+<span id="cb6-11"><a href=""></a>    <span class="cf">return</span> batch</span>
+<span id="cb6-12"><a href=""></a>    </span>
+<span id="cb6-13"><a href=""></a>lux_voice_test <span class="op">=</span> lux_voice_test.<span class="bu">map</span>(prepare_dataset, remove_columns<span class="op">=</span>lux_voice_test.column_names, batch_size<span class="op">=</span><span class="dv">8</span>, num_proc<span class="op">=</span><span class="dv">8</span>, batched<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Audio data is now in an 1-dimensional array shape</li>
 </ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>  {<span class="st">'array'</span>: array([ <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>, ...,</span>
-<span id="cb7-2"><a href="#cb7-2"></a>            <span class="op">-</span><span class="fl">7.4556941e-05</span>, <span class="op">-</span><span class="fl">1.4621433e-05</span>, <span class="op">-</span><span class="fl">5.7861507e-05</span>], dtype<span class="op">=</span>float32),</span>
-<span id="cb7-3"><a href="#cb7-3"></a>     <span class="st">'path'</span>: <span class="st">'/root/.cache/huggingface/datasets/downloads/extracted/05be0c29807a73c9b099873d2f5975dae6d05e9f7d577458a2466ecb9a2b0c6b/cv-corpus-6.1-2020-12-11/tr/clips/common_voice_tr_21921195.mp3'</span>,</span>
-<span id="cb7-4"><a href="#cb7-4"></a>     <span class="st">'sampling_rate'</span>: <span class="dv">16000</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>  {<span class="st">'array'</span>: array([ <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>,  <span class="fl">0.0000000e+00</span>, ...,</span>
+<span id="cb7-2"><a href=""></a>            <span class="op">-</span><span class="fl">7.4556941e-05</span>, <span class="op">-</span><span class="fl">1.4621433e-05</span>, <span class="op">-</span><span class="fl">5.7861507e-05</span>], dtype<span class="op">=</span>float32),</span>
+<span id="cb7-3"><a href=""></a>     <span class="st">'path'</span>: <span class="st">'/root/.cache/huggingface/datasets/downloads/extracted/05be0c29807a73c9b099873d2f5975dae6d05e9f7d577458a2466ecb9a2b0c6b/cv-corpus-6.1-2020-12-11/tr/clips/common_voice_tr_21921195.mp3'</span>,</span>
+<span id="cb7-4"><a href=""></a>     <span class="st">'sampling_rate'</span>: <span class="dv">16000</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="connectionist-temporal-classification-ctc" class="slide level2">
 <h2>Connectionist Temporal Classification (CTC)</h2>
 <p>-Used to decode a sound sequence input</p>
 
-<img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/f212d6ce-5173-4725-95c5-3af7113559cd-1-262023d8-578c-44cc-81a9-24bdc4bf1bb3.png" class="r-stretch"></section>
+<img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/f212d6ce-5173-4725-95c5-3af7113559cd-1-262023d8-578c-44cc-81a9-24bdc4bf1bb3.png" class="r-stretch"></section>
 <section id="training-i.e.-fine-tuning" class="slide level2">
 <h2>Training, i.e.&nbsp;fine-tuning</h2>
 <ul>
@@ -787,63 +789,63 @@ Peter Gilles
 <li>Define training parameters</li>
 <li>Wait for 30 hours</li>
 </ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>model <span class="op">=</span> Wav2Vec2ForCTC.from_pretrained(</span>
-<span id="cb8-2"><a href="#cb8-2"></a>    <span class="st">"facebook/wav2vec2-xls-r-300m"</span>, </span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="co">#"facebook/wav2vec2-xls-r-2b", </span></span>
-<span id="cb8-4"><a href="#cb8-4"></a>    attention_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb8-5"><a href="#cb8-5"></a>    hidden_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb8-6"><a href="#cb8-6"></a>    feat_proj_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb8-7"><a href="#cb8-7"></a>    mask_time_prob<span class="op">=</span><span class="fl">0.05</span>, <span class="co">#0.05</span></span>
-<span id="cb8-8"><a href="#cb8-8"></a>    layerdrop<span class="op">=</span><span class="fl">0.0</span>,</span>
-<span id="cb8-9"><a href="#cb8-9"></a>    ctc_loss_reduction<span class="op">=</span><span class="st">"mean"</span>,</span>
-<span id="cb8-10"><a href="#cb8-10"></a>    ctc_zero_infinity<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
-<span id="cb8-11"><a href="#cb8-11"></a>    pad_token_id<span class="op">=</span>processor.tokenizer.pad_token_id,</span>
-<span id="cb8-12"><a href="#cb8-12"></a>    vocab_size<span class="op">=</span><span class="bu">len</span>(processor.tokenizer),</span>
-<span id="cb8-13"><a href="#cb8-13"></a>)</span>
-<span id="cb8-14"><a href="#cb8-14"></a><span class="bu">print</span>(<span class="st">"Pretrained model loaded"</span>)</span>
-<span id="cb8-15"><a href="#cb8-15"></a></span>
-<span id="cb8-16"><a href="#cb8-16"></a>model.freeze_feature_encoder()</span>
-<span id="cb8-17"><a href="#cb8-17"></a></span>
-<span id="cb8-18"><a href="#cb8-18"></a>training_args <span class="op">=</span> TrainingArguments(</span>
-<span id="cb8-19"><a href="#cb8-19"></a>  output_dir<span class="op">=</span><span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH"</span>,</span>
-<span id="cb8-20"><a href="#cb8-20"></a>  group_by_length<span class="op">=</span><span class="va">True</span>,</span>
-<span id="cb8-21"><a href="#cb8-21"></a>    adam_beta1<span class="op">=</span><span class="fl">0.9</span>,</span>
-<span id="cb8-22"><a href="#cb8-22"></a>    adam_beta2<span class="op">=</span><span class="fl">0.998</span>,</span>
-<span id="cb8-23"><a href="#cb8-23"></a>    adam_epsilon<span class="op">=</span><span class="fl">1e-6</span>,</span>
-<span id="cb8-24"><a href="#cb8-24"></a>    weight_decay<span class="op">=</span><span class="fl">0.005</span>, <span class="co"># Leo: to try 0.01</span></span>
-<span id="cb8-25"><a href="#cb8-25"></a>    per_device_train_batch_size<span class="op">=</span><span class="dv">18</span>, <span class="co">#16, 24, 32(TPU?)</span></span>
-<span id="cb8-26"><a href="#cb8-26"></a>    gradient_accumulation_steps<span class="op">=</span><span class="dv">2</span>, </span>
-<span id="cb8-27"><a href="#cb8-27"></a>    gradient_checkpointing<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
-<span id="cb8-28"><a href="#cb8-28"></a>    evaluation_strategy<span class="op">=</span><span class="st">"steps"</span>,</span>
-<span id="cb8-29"><a href="#cb8-29"></a>    num_train_epochs<span class="op">=</span><span class="dv">30</span>, <span class="co"># Leo: 20, 30 epochs, 40, yqs  0.5 - Just for demo, change it</span></span>
-<span id="cb8-30"><a href="#cb8-30"></a>    fp16<span class="op">=</span><span class="va">True</span>, <span class="co"># Leo: Just on CUDA devices</span></span>
-<span id="cb8-31"><a href="#cb8-31"></a>    save_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb8-32"><a href="#cb8-32"></a>    eval_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb8-33"><a href="#cb8-33"></a>    logging_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
-<span id="cb8-34"><a href="#cb8-34"></a>    learning_rate<span class="op">=</span><span class="fl">3e-4</span>, </span>
-<span id="cb8-35"><a href="#cb8-35"></a>    warmup_steps<span class="op">=</span><span class="dv">800</span>, <span class="co">#400, 20 Just for demo, change it</span></span>
-<span id="cb8-36"><a href="#cb8-36"></a>    save_total_limit<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb8-37"><a href="#cb8-37"></a>    metric_for_best_model<span class="op">=</span><span class="st">"eval_loss"</span>, <span class="co"># Leo for early stopping: eval_wer</span></span>
-<span id="cb8-38"><a href="#cb8-38"></a>    load_best_model_at_end<span class="op">=</span><span class="va">True</span>,  <span class="co"># Leo for early stopping</span></span>
-<span id="cb8-39"><a href="#cb8-39"></a>    greater_is_better<span class="op">=</span><span class="va">False</span>, <span class="co"># Leo for early stopping</span></span>
-<span id="cb8-40"><a href="#cb8-40"></a>  push_to_hub<span class="op">=</span><span class="va">False</span></span>
-<span id="cb8-41"><a href="#cb8-41"></a>)</span>
-<span id="cb8-42"><a href="#cb8-42"></a></span>
-<span id="cb8-43"><a href="#cb8-43"></a>trainer <span class="op">=</span> Trainer(</span>
-<span id="cb8-44"><a href="#cb8-44"></a>    model<span class="op">=</span>model,</span>
-<span id="cb8-45"><a href="#cb8-45"></a>    data_collator<span class="op">=</span>data_collator,</span>
-<span id="cb8-46"><a href="#cb8-46"></a>    args<span class="op">=</span>training_args,</span>
-<span id="cb8-47"><a href="#cb8-47"></a>    compute_metrics<span class="op">=</span>compute_metrics,</span>
-<span id="cb8-48"><a href="#cb8-48"></a>    train_dataset<span class="op">=</span>common_voice_train,</span>
-<span id="cb8-49"><a href="#cb8-49"></a>    eval_dataset<span class="op">=</span>common_voice_test,</span>
-<span id="cb8-50"><a href="#cb8-50"></a>    tokenizer<span class="op">=</span>processor.feature_extractor</span>
-<span id="cb8-51"><a href="#cb8-51"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>model <span class="op">=</span> Wav2Vec2ForCTC.from_pretrained(</span>
+<span id="cb8-2"><a href=""></a>    <span class="st">"facebook/wav2vec2-xls-r-300m"</span>, </span>
+<span id="cb8-3"><a href=""></a>    <span class="co">#"facebook/wav2vec2-xls-r-2b", </span></span>
+<span id="cb8-4"><a href=""></a>    attention_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-5"><a href=""></a>    hidden_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-6"><a href=""></a>    feat_proj_dropout<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-7"><a href=""></a>    mask_time_prob<span class="op">=</span><span class="fl">0.05</span>, <span class="co">#0.05</span></span>
+<span id="cb8-8"><a href=""></a>    layerdrop<span class="op">=</span><span class="fl">0.0</span>,</span>
+<span id="cb8-9"><a href=""></a>    ctc_loss_reduction<span class="op">=</span><span class="st">"mean"</span>,</span>
+<span id="cb8-10"><a href=""></a>    ctc_zero_infinity<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
+<span id="cb8-11"><a href=""></a>    pad_token_id<span class="op">=</span>processor.tokenizer.pad_token_id,</span>
+<span id="cb8-12"><a href=""></a>    vocab_size<span class="op">=</span><span class="bu">len</span>(processor.tokenizer),</span>
+<span id="cb8-13"><a href=""></a>)</span>
+<span id="cb8-14"><a href=""></a><span class="bu">print</span>(<span class="st">"Pretrained model loaded"</span>)</span>
+<span id="cb8-15"><a href=""></a></span>
+<span id="cb8-16"><a href=""></a>model.freeze_feature_encoder()</span>
+<span id="cb8-17"><a href=""></a></span>
+<span id="cb8-18"><a href=""></a>training_args <span class="op">=</span> TrainingArguments(</span>
+<span id="cb8-19"><a href=""></a>  output_dir<span class="op">=</span><span class="st">"./wav2vec2-large-xls-r-LUXEMBOURGISH"</span>,</span>
+<span id="cb8-20"><a href=""></a>  group_by_length<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb8-21"><a href=""></a>    adam_beta1<span class="op">=</span><span class="fl">0.9</span>,</span>
+<span id="cb8-22"><a href=""></a>    adam_beta2<span class="op">=</span><span class="fl">0.998</span>,</span>
+<span id="cb8-23"><a href=""></a>    adam_epsilon<span class="op">=</span><span class="fl">1e-6</span>,</span>
+<span id="cb8-24"><a href=""></a>    weight_decay<span class="op">=</span><span class="fl">0.005</span>, <span class="co"># Leo: to try 0.01</span></span>
+<span id="cb8-25"><a href=""></a>    per_device_train_batch_size<span class="op">=</span><span class="dv">18</span>, <span class="co">#16, 24, 32(TPU?)</span></span>
+<span id="cb8-26"><a href=""></a>    gradient_accumulation_steps<span class="op">=</span><span class="dv">2</span>, </span>
+<span id="cb8-27"><a href=""></a>    gradient_checkpointing<span class="op">=</span><span class="va">True</span>, <span class="co">#Missing</span></span>
+<span id="cb8-28"><a href=""></a>    evaluation_strategy<span class="op">=</span><span class="st">"steps"</span>,</span>
+<span id="cb8-29"><a href=""></a>    num_train_epochs<span class="op">=</span><span class="dv">30</span>, <span class="co"># Leo: 20, 30 epochs, 40, yqs  0.5 - Just for demo, change it</span></span>
+<span id="cb8-30"><a href=""></a>    fp16<span class="op">=</span><span class="va">True</span>, <span class="co"># Leo: Just on CUDA devices</span></span>
+<span id="cb8-31"><a href=""></a>    save_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-32"><a href=""></a>    eval_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-33"><a href=""></a>    logging_steps<span class="op">=</span><span class="dv">400</span>, <span class="co">#20  Just for demo, change it</span></span>
+<span id="cb8-34"><a href=""></a>    learning_rate<span class="op">=</span><span class="fl">3e-4</span>, </span>
+<span id="cb8-35"><a href=""></a>    warmup_steps<span class="op">=</span><span class="dv">800</span>, <span class="co">#400, 20 Just for demo, change it</span></span>
+<span id="cb8-36"><a href=""></a>    save_total_limit<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb8-37"><a href=""></a>    metric_for_best_model<span class="op">=</span><span class="st">"eval_loss"</span>, <span class="co"># Leo for early stopping: eval_wer</span></span>
+<span id="cb8-38"><a href=""></a>    load_best_model_at_end<span class="op">=</span><span class="va">True</span>,  <span class="co"># Leo for early stopping</span></span>
+<span id="cb8-39"><a href=""></a>    greater_is_better<span class="op">=</span><span class="va">False</span>, <span class="co"># Leo for early stopping</span></span>
+<span id="cb8-40"><a href=""></a>  push_to_hub<span class="op">=</span><span class="va">False</span></span>
+<span id="cb8-41"><a href=""></a>)</span>
+<span id="cb8-42"><a href=""></a></span>
+<span id="cb8-43"><a href=""></a>trainer <span class="op">=</span> Trainer(</span>
+<span id="cb8-44"><a href=""></a>    model<span class="op">=</span>model,</span>
+<span id="cb8-45"><a href=""></a>    data_collator<span class="op">=</span>data_collator,</span>
+<span id="cb8-46"><a href=""></a>    args<span class="op">=</span>training_args,</span>
+<span id="cb8-47"><a href=""></a>    compute_metrics<span class="op">=</span>compute_metrics,</span>
+<span id="cb8-48"><a href=""></a>    train_dataset<span class="op">=</span>common_voice_train,</span>
+<span id="cb8-49"><a href=""></a>    eval_dataset<span class="op">=</span>common_voice_test,</span>
+<span id="cb8-50"><a href=""></a>    tokenizer<span class="op">=</span>processor.feature_extractor</span>
+<span id="cb8-51"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="attaching-a-language-model" class="slide level2">
 <h2>Attaching a language model</h2>
-<div class="quarto-layout-panel">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p><strong></strong></p>
 <ul>
 <li>Small vocabulary in the training data
@@ -863,7 +865,7 @@ Peter Gilles
 <p><strong></strong></p>
 <div class="quarto-figure quarto-figure-left">
 <figure>
-<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/c9c84edb-659c-468a-8acb-8bff777b8074-1-9b2955a1-2122-4124-b7aa-3adf994ca44c.png"></p>
+<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/c9c84edb-659c-468a-8acb-8bff777b8074-1-9b2955a1-2122-4124-b7aa-3adf994ca44c.png" class="quarto-figure quarto-figure-left" style="width:60.0%"></p>
 </figure>
 </div>
 </div>
@@ -958,9 +960,9 @@ Peter Gilles
 <ul>
 <li>Building blocks of Whisper</li>
 </ul>
-<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-2-3a2a54f2-c345-408c-8194-1b464a8e184f.png"></p>
+<p><img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-2-3a2a54f2-c345-408c-8194-1b464a8e184f.png"></p>
 <ul>
-<li>Performance of Whisper (Word Error Rate) <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202023_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-1-3741c1d2-45eb-48fd-9748-8c9fe46808ae.png"></li>
+<li>Performance of Whisper (Word Error Rate) <img data-src="Speech%20Recognition%20-%20Data%20Science%20and%20the%20Humanities%20-%202024_files/figure-revealjs/d70eafe7-304a-4ec6-9cb0-433b6730e430-1-3741c1d2-45eb-48fd-9748-8c9fe46808ae.png"></li>
 </ul>
 </section>
 <section id="evaluation-of-wav2vec-2.0-and-whisper" class="slide level2">
@@ -1046,7 +1048,7 @@ Peter Gilles
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-baevskiWav2vecFrameworkSelfSupervised2020" class="csl-entry" role="listitem">
 Baevski, Alexei, Henry Zhou, Abdelrahman Mohamed, and Michael Auli. 2020. <span>“Wav2vec 2.0: <span>A</span> <span>Framework</span> for <span>Self</span>-<span>Supervised</span> <span>Learning</span> of <span>Speech</span> <span>Representations</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2006.11477">https://doi.org/10.48550/arXiv.2006.11477</a>.
 </div>
@@ -1072,28 +1074,30 @@ Hui, Jonathan. 2019. <span>“Speech <span>Recognition</span> — <span>Feature<
 Radford, Alec, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ilya Sutskever. 2022. <span>“Robust <span>Speech</span> <span>Recognition</span> via <span>Large</span>-<span>Scale</span> <span>Weak</span> <span>Supervision</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2212.04356">https://doi.org/10.48550/arXiv.2212.04356</a>.
 </div>
 </div>
+<div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
+</div>
 </div>
 </section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="Speech Recognition - Data Science and the Humanities - 2023_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="Speech Recognition - Data Science and the Humanities - 2024_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -1103,7 +1107,6 @@ Radford, Alec, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ily
       Reveal.initialize({
 'controlsAuto': true,
 'previewLinksAuto': true,
-'smaller': true,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
@@ -1365,10 +1368,9 @@ Radford, Alec, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ily
         // clear code selection
         e.clearSelection();
       });
-      function tippyHover(el, contentFn) {
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
-          content: contentFn,
           maxWidth: 500,
           delay: 100,
           arrow: false,
@@ -1378,8 +1380,17 @@ Radford, Alec, Jong Wook Kim, Tao Xu, Greg Brockman, Christine McLeavey, and Ily
           interactive: true,
           interactiveBorder: 10,
           theme: 'light-border',
-          placement: 'bottom-start'
+          placement: 'bottom-start',
         };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
           config['offset'] = [0,0];
           config['maxWidth'] = 700;
         window.tippy(el, config); 
